@@ -17,7 +17,7 @@ setup(
     description="A cross-platform simplenote-syncing note-taking app inspired by Notational Velocity.",
     license="BSD",
     keywords="simplenote note-taking tkinter nvalt markdown",
-    url="https://github.com/cpbotha/nvpy",
+    url="https://github.com/inl27/nvpy",
     packages=['nvpy'],
     long_description=read('README.rst'),
     # these are in reality not hard requirements of nvpy
