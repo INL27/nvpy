@@ -120,17 +120,17 @@ class Config:
                     'list_font_size': '10',
                     'layout': 'horizontal',
                     'print_columns': '0',
-                    'text_color': 'black',
-                    'selected_note_color': 'light blue',
+                    'text_color': 'white',
+                    'selected_note_color': 'blue',
                     'note_info_color': 'dark gray',
-                    'highlight_note_info_color': 'lightyellow',
+                    'highlight_note_info_color': 'yellow',
                     'url_color': '#03f',
-                    'background_color': 'white',
-                    'highlight_background_color': 'yellow',
+                    'background_color': '#0f0f0f',
+                    'highlight_background_color': 'midnight blue',
                     'sn_username': '',
                     'sn_password': '',
-                    'simplenote_sync': '1',
-                    'background_full_sync': 'true',
+                    'simplenote_sync': '0',
+                    'background_full_sync':'false',
                     'debug': '1',
                     # Filename or filepath to a css file used style the rendered
                     # output; e.g. nvpy.css or /path/to/my.css
@@ -147,11 +147,11 @@ class Config:
 
         # later config files overwrite earlier files
         # try a number of alternatives
-        cfg_files = [os.path.join(app_dir, 'nvpy.cfg'),
-                     os.path.join(home, 'nvpy.cfg'),
-                     os.path.join(home, '.nvpy.cfg'),
-                     os.path.join(home, '.nvpy'),
-                     os.path.join(home, '.nvpyrc')]
+        cfg_files = [os.path.join(app_dir, 'nvpy.cfg')]
+                     #os.path.join(home, 'nvpy.cfg'),
+                     #os.path.join(home, '.nvpy.cfg'),
+                     #os.path.join(home, '.nvpy'),
+                     #os.path.join(home, '.nvpyrc')]
 
         # user has specified either a specific path to a CFG file, or a
         # path relative to the nvpy.py location. specific takes precedence.
