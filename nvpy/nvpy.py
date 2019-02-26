@@ -98,10 +98,12 @@ class Config:
         self.app_dir = app_dir
         # cross-platform way of getting home dir!
         # http://stackoverflow.com/a/4028943/532513
-        home = os.path.abspath(os.path.expanduser('~'))
+        #home = os.path.abspath(os.path.expanduser('~'))
+        home = "D:\apps\inuse\notepads\nvpydy"
         defaults = {'app_dir': app_dir,
                     'appdir': app_dir,
-                    'home': home,
+                    #'home': home,
+                    'home': appdir,
                     'notes_as_txt': '0',
                     'read_txt_extensions': 'txt,mkdn,md,mdown,markdown',
                     'housekeeping_interval': '2',
@@ -110,8 +112,10 @@ class Config:
                     'search_tags': '1',
                     'sort_mode': '1',
                     'pinned_ontop': '1',
-                    'db_path': os.path.join(home, '.nvpy'),
-                    'txt_path': os.path.join(home, '.nvpy/notes'),
+                    #'db_path': os.path.join(home, '.nvpy'),
+                    'db_path': join(appdir, '/db'),
+                    #'txt_path': os.path.join(home, '.nvpy/notes'),
+                    'txt_path': join(appdir, '/notes'),
                     'theme': 'default',
                     'font_family': 'Courier',  # monospaced on all platforms
                     'font_size': '10',
