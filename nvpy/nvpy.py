@@ -103,7 +103,7 @@ class Config:
         defaults = {'app_dir': app_dir,
                     'appdir': app_dir,
                     #'home': home,
-                    'home': appdir,
+                    'home': app_dir,
                     'notes_as_txt': '0',
                     'read_txt_extensions': 'txt,mkdn,md,mdown,markdown',
                     'housekeeping_interval': '2',
@@ -113,9 +113,9 @@ class Config:
                     'sort_mode': '1',
                     'pinned_ontop': '1',
                     #'db_path': os.path.join(home, '.nvpy'),
-                    'db_path': join(appdir, '/db'),
+                    'db_path': join(app_dir, '/db'),
                     #'txt_path': os.path.join(home, '.nvpy/notes'),
-                    'txt_path': join(appdir, '/notes'),
+                    'txt_path': join(app_dir, '/notes'),
                     'theme': 'default',
                     'font_family': 'Courier',  # monospaced on all platforms
                     'font_size': '10',
@@ -151,7 +151,7 @@ class Config:
 
         # later config files overwrite earlier files
         # try a number of alternatives
-        cfg_files = [os.path.join(app_dir, 'nvpy.cfg')]
+        cfg_files = [join(app_dir, 'nvpy.cfg')]
                      #os.path.join(home, 'nvpy.cfg'),
                      #os.path.join(home, '.nvpy.cfg'),
                      #os.path.join(home, '.nvpy'),
